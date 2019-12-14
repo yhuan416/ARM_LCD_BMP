@@ -1,6 +1,6 @@
-#include "common.h"
+#include "../common.h"
 
-#include "lib/bmp.h"
+#include "../lib/bmp.h"
 
 
 int main(int argc, char const *argv[])
