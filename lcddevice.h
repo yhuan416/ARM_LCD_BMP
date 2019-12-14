@@ -1,7 +1,7 @@
 #ifndef LCDDEVICE_H
 #define LCDDEVICE_H
 
-#include "bmp.h"
+#include "lib/bmp.h"
 
 class LcdDevice
 {
