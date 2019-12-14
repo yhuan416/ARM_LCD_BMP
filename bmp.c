@@ -103,19 +103,13 @@ int draw_block_lcd(lcd_device_p lcd_device, int lcd_x, int lcd_y, int w, int h, 
 
 	for(y = lcd_y; y < lcd_y + h; y++)
 	{
-		if (y >= (lcd_device->lcd_y_size) || y < 0)
-		{
-			continue;
-		}
+		if (y >= (lcd_device->lcd_y_size) || y < 0){continue;}
 
 		index = y * (lcd_device->lcd_x_size);
 
 		for(x = lcd_x; x < lcd_x + w; x++)
 		{		
-			if (x >= (lcd_device->lcd_x_size) || x < 0)
-			{
-				continue;	
-			}
+			if (x >= (lcd_device->lcd_x_size) || x < 0){continue;}
 
 			lcd_device->lcd_mem[index + x] = colour;
 		}
@@ -137,19 +131,13 @@ int draw_point_lcd(lcd_device_p lcd_device, int lcd_x, int lcd_y, int r, int col
 
 	for(y = (lcd_y - r); y <= (lcd_y + r); y++)
 	{
-		if (y >= (lcd_device->lcd_y_size) || y < 0)
-		{
-			continue;
-		}
+		if (y >= (lcd_device->lcd_y_size) || y < 0){continue;}
 
 		index = y * (lcd_device->lcd_x_size);
 
 		for(x = (lcd_x - r); x <= (lcd_x + r); x++)
 		{		
-			if (x >= (lcd_device->lcd_x_size) || x < 0)
-			{
-				continue;
-			}	
+			if (x >= (lcd_device->lcd_x_size) || x < 0){continue;}	
 
 			if ((((double)x-lcd_x)*((double)x-lcd_x)) + (((double)y-lcd_y))*((double)y-lcd_y) <= (double)r*r)
 			{
