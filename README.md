@@ -94,8 +94,6 @@ int draw_circle_lcd(lcd_device_p lcd_device, int lcd_x, int lcd_y, int r, int si
 > bmp_info_p read_bmp(const char *name);  
 > int dele_bmp_info(bmp_info_p bmp_p);  
 
-
-
 ## 显示图片
 > int show_bmp(lcd_device_p lcd_device, bmp_info_p bmp_p, int lcd_x, int lcd_y, int bmp_w, int bmp_h, int offset_x, int offset_y);  
 
