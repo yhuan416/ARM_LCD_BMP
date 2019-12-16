@@ -83,10 +83,10 @@ int draw_circle_lcd(lcd_device_p lcd_device, int lcd_x, int lcd_y, int r, int si
 这两个函数都是都是调用上面的画圆点/方点函数完成的  
 参数接口与上面类似,就不一一介绍了  
 
+---
 
-注意:清空屏幕可以使用 draw_block_lcd(lcd_device_p lcd_device, int lcd_x, int lcd_y, int w, int h, int colour);  
-
-> 例如: draw_block_lcd(&lcd, 0, 0, lcd.lcd_x_size, lcd.lcd_y_size, getColourRGB(0,0,0));  
+PS : clean screen can use draw_block_lcd();  
+> example: draw_block_lcd(&lcd, 0, 0, lcd.lcd_x_size, lcd.lcd_y_size, getColourRGB(0,0,0));  
 
 ----------------------------------------------------------------------------------------------
 
@@ -110,4 +110,13 @@ bmp_w,bmp_h
 
 offset_x,offset_y  
 图片上显示的区域与图片起始点的偏移量  
+
+
+
+
+
+
+
+
+
 
