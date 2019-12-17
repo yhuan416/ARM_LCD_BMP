@@ -1,6 +1,6 @@
-2019.12.14
+**2019.12.14**
  
-Author : YHUAN
+**Author : YHUAN**
  
 这个BMP库是我自己写的,通过内存映射和文件IO对linux下的显示屏设备进行操作
 
@@ -11,10 +11,9 @@ main.cpp是C++环境下的测试文件
 
 libbmparm.so库是使用5.4.0版本的arm-linux-gcc编译的动态库
 
----------------------------------------------------------------------------------------------------------
+---
 
-
-# **功能介绍:**
+# 功能介绍:
 
 > lcd_device_t, lcd_device_p  
 
@@ -28,7 +27,7 @@ libbmparm.so库是使用5.4.0版本的arm-linux-gcc编译的动态库
 
 --------------------------------------------------------------
 
-> bmp_info_t, bmp_info_p
+> bmp_info_t, bmp_info_p  
 
 
 ## bmp图片的信息结构体:
@@ -37,7 +36,7 @@ libbmparm.so库是使用5.4.0版本的arm-linux-gcc编译的动态库
 如果是比较小的图片素材,可以在程序启动时进行加载,并在程序退出时进行释放,以达到提升程序运行效率的目的  
 
 
---------------------------------------------------------------
+---
 
 
 ## 初始化/关闭显示屏,调用这两个函数对显示屏进行初始化或关闭
@@ -45,9 +44,12 @@ libbmparm.so库是使用5.4.0版本的arm-linux-gcc编译的动态库
 > void close_lcd(lcd_device_p lcd_device);  
 
 
---------------------------------------------------------------  
+---
+
 
 注意: 参数colour是32位的ARGB,可以通过宏函数getColourRGB(r,g,b)获取  
+
+---
 
 
 ## 在显示屏上画圆点/方点(内部有填充)  
@@ -65,11 +67,11 @@ colour:填充的颜色
 对于圆来说,基准点是圆心  
 
 
-
 ## 在显示屏上画线  
 > int draw_line_lcd(lcd_device_p lcd_device, int lcd_x, int lcd_y, int lcd_x1, int lcd_y1, int size, int colour);  
 
 这个函数是调用上面的画方块函数完成的  
+
 lcd_x, lcd_y : 起始点  
 lcd_x1, lcd_y1 : 终止点  
 
@@ -77,18 +79,20 @@ size:粗细(最好用偶数)
 
 
 ## 在显示屏上画圆/矩形(内部无填充)
-int draw_rect_lcd(lcd_device_p lcd_device, int lcd_x, int lcd_y, int w, int h, int size, int colour);  
-int draw_circle_lcd(lcd_device_p lcd_device, int lcd_x, int lcd_y, int r, int size, int colour);  
+> int draw_rect_lcd(lcd_device_p lcd_device, int lcd_x, int lcd_y, int w, int h, int size, int colour);  
+> int draw_circle_lcd(lcd_device_p lcd_device, int lcd_x, int lcd_y, int r, int size, int colour);  
 
 这两个函数都是都是调用上面的画圆点/方点函数完成的  
 参数接口与上面类似,就不一一介绍了  
 
 ---
 
-PS : clean screen can use draw_block_lcd();  
+> PS : clean screen can use draw_block_lcd();  
 > example: draw_block_lcd(&lcd, 0, 0, lcd.lcd_x_size, lcd.lcd_y_size, getColourRGB(0,0,0));  
 
-----------------------------------------------------------------------------------------------
+
+---
+
 
 ## 读取/释放bmp图片信息
 > bmp_info_p read_bmp(const char *name);  
@@ -112,11 +116,5 @@ offset_x,offset_y
 图片上显示的区域与图片起始点的偏移量  
 
 
-
-
-
-
-
-
-
+---  
 
