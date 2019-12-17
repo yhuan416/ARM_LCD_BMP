@@ -1,5 +1,5 @@
 **2019.12.14**  
-**Author : YHUAN**  
+**Author : [YHUAN](https://github.com/yhuan416)**  
 **这个BMP库是我自己写的,通过内存映射和文件IO对linux下的显示屏设备进行操作**  
 
 # 目录简介:
