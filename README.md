@@ -4,12 +4,12 @@
 
 # 目录简介:
 
-*test.c 是在C语言环境下的测试文件*
+*test.c 是在C语言环境下的测试文件*  
 
-*lcddevice.cpp & lcddevice.h 是在C++中对库的封装*
-*main.cpp是C++环境下的测试文件*
+*lcddevice.cpp & lcddevice.h 是在C++中对库的封装*  
+*main.cpp是C++环境下的测试文件*  
 
-*libbmparm.so库是使用5.4.0版本的arm-linux-gcc编译的动态库*
+*libbmparm.so库是使用5.4.0版本的arm-linux-gcc编译的动态库*  
 
 
 ---
